@@ -22,7 +22,7 @@ namespace UsuariosApi.Controllers
 
 			if (resultado.IsFailed) return Unauthorized(resultado.Errors);
 
-			return Ok(resultado.Successes);
+			return Ok(resultado.Successes.FirstOrDefault());
 		}
 	}
 }

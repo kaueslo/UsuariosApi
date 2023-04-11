@@ -14,7 +14,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<UserDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("UsuarioConnection")));
-builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>().AddEntityFrameworkStores<UserDbContext>();
+builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(
+	//Deixando a confirmacao de email necessaria
+	x => x.SignIn.RequireConfirmedEmail = true
+	).AddEntityFrameworkStores<UserDbContext>();
 builder.Services.AddScoped<CadastroService, CadastroService>();
 builder.Services.AddScoped<LoginService, LoginService>();
 builder.Services.AddScoped<TokenService, TokenService>();

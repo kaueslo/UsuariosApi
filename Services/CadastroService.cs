@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentResults;
 using Microsoft.AspNetCore.Identity;
+using System.Web;
 using UsuariosApi.Data.Dto;
 using UsuariosApi.Data.Request;
 using UsuariosApi.Models;
@@ -33,7 +34,9 @@ namespace UsuariosApi.Services
 				//Variavel de codigo de ativacao
 				var code = _userManager.GenerateEmailConfirmationTokenAsync(usuarioIdentity);
 
-				_emailService.EnviarEmail(new[] {usuarioIdentity.Email }, "Link de ativação", usuarioIdentity.Id, code.Result);
+				var encodedCode = HttpUtility.UrlEncode(code.Result);
+
+				_emailService.EnviarEmail(new[] {usuarioIdentity.Email }, "Link de ativação", usuarioIdentity.Id, encodedCode);
 
 				return Result.Ok().WithSuccess(code.Result); 
 			}

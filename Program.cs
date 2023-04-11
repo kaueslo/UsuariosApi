@@ -17,7 +17,7 @@ builder.Services.AddDbContext<UserDbContext>(options => options.UseMySQL(builder
 builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(
 	//Deixando a confirmacao de email necessaria
 	x => x.SignIn.RequireConfirmedEmail = true
-	).AddEntityFrameworkStores<UserDbContext>();
+	).AddEntityFrameworkStores<UserDbContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<CadastroService, CadastroService>();
 builder.Services.AddScoped<LoginService, LoginService>();
 builder.Services.AddScoped<TokenService, TokenService>();

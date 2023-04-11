@@ -92,3 +92,5 @@ C:\Users\kaues\OneDrive\Área de Trabalho\Curso\.Net\ProjetoFilmes\UsuariosApi\b
 C:\Users\kaues\OneDrive\Área de Trabalho\Curso\.Net\ProjetoFilmes\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\kaues\OneDrive\Área de Trabalho\Curso\.Net\ProjetoFilmes\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\kaues\OneDrive\Área de Trabalho\Curso\.Net\ProjetoFilmes\UsuariosApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kaues\OneDrive\Área de Trabalho\Curso\.Net\ProjetoFilmes\UsuariosApi\bin\Debug\net6.0\MailKit.dll
+C:\Users\kaues\OneDrive\Área de Trabalho\Curso\.Net\ProjetoFilmes\UsuariosApi\bin\Debug\net6.0\MimeKit.dll
